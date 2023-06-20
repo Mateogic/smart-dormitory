@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/homepage/homepage",
+    "pages/catalogue/catalogue",
+    "pages/mydatanow/mydatanow",
+    "pages/historyrecord/historyrecord",
+    "pages/charts/charts",
+    "pages/weather/weather",
+    "pages/clock/clock",
+    "pages/notebook/notebook"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/mydatanow/mydatanow",
+      "text": "当前信息",
+      "iconPath": "/image/1.png",
+      "selectedIconPath": "/image/2.png"
+    },{
+      "pagePath": "pages/historyrecord/historyrecord",
+      "text":"历史数据",
+      "iconPath": "/image/1.png",
+      "selectedIconPath": "/image/2.png"
+    },{
+      "pagePath": "pages/charts/charts",
+      "text":"绘图",
+      "iconPath": "/image/1.png",
+      "selectedIconPath": "/image/2.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

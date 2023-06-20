@@ -1,0 +1,32 @@
+<!--pages/notebook/notebook.wxml-->
+<view class="container">
+  <view class="header">
+    <image src="/image/add.png" bindtap="addTodoHandle"></image>
+    <input type="text" placeholder="请输入..." value="{{input}}" bindinput="inputChangeHandle" bindconfirm="addTodoHandle">
+    </input>
+  </view>
+
+
+
+  <block wx:if="{{todos.length}}">
+    <view class="todos">
+      <view class="item{{item.complete?' complete':' '}}" wx:for="{{todos}}" bindtap="toggleToHandle" data-index="{{index}}">
+        <!--wx:for的任务就是遍历数组的对象个数-->
+        <!-- 图标显示 -->
+        <icon type="{{item.complete?'success':'circle'}}"></icon>
+        <text>{{item.name}}</text>
+        <icon type="clear" size="16" catchtap="DeleteHandle" data-index="{{index}}"></icon>
+        <!--图标的大小利用size属性即可调整-->
+      </view>
+    </view>
+    <view class="footer">
+      <text bindtap="toggleAllHandle">全选</text>
+      <text wx:if="{{leftCount}}">{{leftCount}} {{leftCount>1?'未完成':'未完成'}} 事件</text>
+      <text bindtap="clearHandle">清空完成事件</text>
+    </view>
+
+  </block>
+  <view wx:else>
+    <text>您还没有开始记录任何事件呢哦</text>
+  </view>
+</view>

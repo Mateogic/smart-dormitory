@@ -1,0 +1,16 @@
+<!--pages/charts/charts.wxml-->
+<view class="container">
+  <view class="warn" wx:if="{{!receive}}">暂无数据，请先去历史记录栏选择数据</view>
+  <view wx:if="{{Hei}}" class="title">身高</view>
+  <ec-canvas wx:if="{{Hei}}" id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}"></ec-canvas>
+  <view wx:if="{{Wei}}" class="title">体重</view>
+  <ec-canvas wx:if="{{Wei}}" id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec2 }}"></ec-canvas>
+  <view wx:if="{{Bmi}}" class="title">BMI</view>
+  <ec-canvas wx:if="{{Bmi}}" id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec3 }}"></ec-canvas>
+  <view class="change">
+    <view class="item" bindtap="hei"><text>身高</text></view>
+    <view class="item borderleft" bindtap="wei"><text>体重</text></view>
+    <view class="item borderleft" bindtap="bmi"><text>BMI</text></view>
+  </view>
+
+</view>
