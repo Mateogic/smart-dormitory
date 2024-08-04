@@ -1,0 +1,71 @@
+/* pages/notebook/notebook.wxss */
+.container {
+  border-top: 1rpx solid #e0e0e0;
+}
+
+.header {
+  border: 1rpx solid #e0e0e0;
+  margin: 20rpx;
+  border-radius: 10rpx;
+  /*边框圆角平滑度*/
+  box-shadow: 0 0 5px #e0e0e0;
+  /*边框阴影*/
+  display: flex;
+  /*伸缩布局*/
+  padding: 20rpx;
+  /*内边距*/
+  align-items: center;
+  /*侧轴对其，就是说的y轴*/
+}
+
+.header image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.todos {
+  border: 1rpx solid #e0e0e0;
+  margin: 20rpx;
+  border-radius: 10rpx;
+  /*边框圆角平滑度*/
+  box-shadow: 0 0 5px #e0e0e0;
+  /*边框阴影*/
+}
+
+.todos .item {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  /*侧轴对齐，主要用作图标对齐一致*/
+}
+
+.todos .item:last-child {
+  /*防止最后一个项目与外边框线重合加深颜色*/
+  /* color: red; */
+  border-bottom: 0;
+}
+
+.todos .item text {
+  flex: 1;
+  /*采用固比模型*/
+  font-size: 35rpx;
+  color: #444;
+  margin-left: 20rpx;
+}
+
+.todos .item.complete text {
+  color: #888;
+  text-decoration: line-through;
+  /*内容添加中划线*/
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  /*内容的一种对齐方式，元素与元素之间的缝隙是默认相等的*/
+  /* justify-content: space-around; 元素与元素左右之间的缝隙是相等的 */
+  margin: 20rpx;
+  font-size: 30rpx;
+}

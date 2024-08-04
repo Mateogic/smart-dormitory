@@ -1,0 +1,37 @@
+<!--pages/mydatanow/mydatanow.wxml-->
+<scroll-view scroll-y="true" class="container">
+
+  <view class="bigbox">
+    <view class="box">
+      <view class="title">
+        <text>身 高 (单位：m)</text>
+      </view>
+      <view class="content">
+        <text>{{height}}</text>
+      </view>
+    </view>
+    <view class="box">
+      <view class="title">
+        <text>体 重 (单位：kg)</text>
+      </view>
+      <view class="content">
+        <text>{{weight}}</text>
+      </view>
+    </view>
+    <view class="box">
+      <view class="title">
+        <text>BMI (体重（kg）÷身高^2（m）)</text>
+      </view>
+      <view class="content">
+        <text>{{bmi}}--{{mystate[state]}}</text>
+        <text class="more" bindtap="more">BMI分类{{symbol}}</text>
+      </view>
+      <view wx:if="{{show}}" class="type">
+        <text>过轻：低于18.5</text>
+        <text>正常：18.5-23.9</text>
+        <text>过重：24-27.9</text>
+        <text>肥胖：大于等于28</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>

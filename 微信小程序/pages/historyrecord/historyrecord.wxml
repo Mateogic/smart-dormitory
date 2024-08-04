@@ -1,0 +1,25 @@
+<!--pages/historyrecord/historyrecord.wxml-->
+<scroll-view scroll-y="true" class="container">
+  <view class="btn" bindtap="refresh">
+    <button>刷新</button>
+  </view>
+  <view class="box">
+    <view class="title">
+      <text>历史记录</text>
+      <button class="choose" size="mini" plain="true" bindtap="mychoice">选择</button>
+      <button class="confirm" disabled="{{choice}}" size="mini" plain="true" bindtap="switch">确认</button>
+    </view>
+    <view class="content">
+      <checkbox-group bindchange="change" class="check">
+
+        <checkbox wx:for="{{number}}" value="{{index}}" disabled="{{choice}}" class="list">
+          <text style="display: flex">{{height.datapoints[index].value}} 米| {{weight.datapoints[index].value}} 公斤|体质指数: {{bmi.datapoints[index].value}} --{{mystate[state.datapoints[index].value]}}</text>
+          <text style="display: flex;flex-direction: row; justify-content: flex-end;">{{weight.datapoints[index].at}}</text>
+        </checkbox>
+
+      </checkbox-group>
+    </view>
+
+  </view>
+  <view class="separate"></view>
+</scroll-view>

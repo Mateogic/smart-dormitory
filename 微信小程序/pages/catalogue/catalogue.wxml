@@ -1,0 +1,45 @@
+<!--pages/catalogue/catalogue.wxml-->
+
+<view class="container">
+
+  <view class="title">目录</view>
+
+  <view class="power">
+    <view class="power_info" bindtap="weather">
+      <view class="power_info_text">
+        <view class="power_info_text_title">室内体感</view>
+        <view class="power_info_text_tip">合理更衣开启舒爽一天</view>
+      </view>
+    </view>
+  </view>
+
+
+
+  <view class="power">
+    <view class="power_info" bindtap="clock">
+      <view class="power_info_text">
+        <view class="power_info_text_title">闹钟</view>
+        <view class="power_info_text_tip">劝君惜取少年时</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="power">
+    <view class="power_info" bindtap="notebook">
+      <view class="power_info_text">
+        <view class="power_info_text_title">记事本</view>
+        <view class="power_info_text_tip">好记性不如烂笔头</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="power">
+    <view class="power_info" bindtap="bmi">
+      <view class="power_info_text">
+        <view class="power_info_text_title">BMI记录</view>
+        <view class="power_info_text_tip">包含身高、体重、BMI信息</view>
+      </view>
+    </view>
+  </view>
+
+</view>

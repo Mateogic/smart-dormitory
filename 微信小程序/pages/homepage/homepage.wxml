@@ -1,0 +1,4 @@
+<!--pages/homepage/homepage.wxml-->
+<view class="container">
+  <image bindtap="navigate" style="opacity: 0.6;" src="https://img-blog.csdnimg.cn/e4c7c096e12b4b1994f7af98b3367288.png"></image>
+</view>
